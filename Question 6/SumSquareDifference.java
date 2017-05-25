@@ -1,5 +1,9 @@
 public class SumSquareDifference
 {
+    public static void main(String[] args){
+        System.out.println(SumSquareDifference.main(100));
+    }
+
     public static int main(int limit)
     {   
         int sqrOfSum = (int) Math.pow( (double) summationOfPowerOne(limit), (double) 2);
