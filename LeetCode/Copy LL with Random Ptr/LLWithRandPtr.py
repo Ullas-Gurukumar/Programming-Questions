@@ -73,18 +73,18 @@ list.listprint()
 # beginning of copying linked list
 
 hashtable = {}
+
 currNode = list.head
+# Iterating over the linked list and creating a mapping between Old Nodes to new Nodes.
 while currNode is not None:
     hashtable[currNode] = Node(currNode.data)
     currNode = currNode.next
-
-# for node in nodeList:
-#     hashtable[node] = Node(node.data)
 
 copiedLinkedList = LinkedList()
 copiedLinkedList.head = hashtable[list.head]
 
 currNode = list.head
+# Iterating over again and setting next and random pointer for each node
 while currNode is not None:
     if currNode.next != None:
         hashtable[currNode].next = hashtable[currNode.next]
