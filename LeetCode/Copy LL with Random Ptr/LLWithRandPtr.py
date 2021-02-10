@@ -9,7 +9,16 @@ class Node:
         self.randomPointer = randomPointer
 
     def __hash__(self):
-        return hash((self.data, self.next, self.randomPointer))
+        try:
+            nextVal = self.next.data
+        except:
+            nextVal = "null"
+
+        try:
+            randVal = self.randomPointer.data
+        except:
+            randVal = "null"
+        return hash((self.data, nextVal, randVal))
 
     def __eq__(self, other):
         if isinstance(other, Node):
@@ -60,3 +69,30 @@ list = LinkedList()
 list.head = nodeList[0]
 
 list.listprint()
+
+# beginning of copying linked list
+
+hashtable = {}
+currNode = list.head
+while currNode is not None:
+    hashtable[currNode] = Node(currNode.data)
+    currNode = currNode.next
+
+# for node in nodeList:
+#     hashtable[node] = Node(node.data)
+
+copiedLinkedList = LinkedList()
+copiedLinkedList.head = hashtable[list.head]
+
+currNode = list.head
+while currNode is not None:
+    if currNode.next != None:
+        hashtable[currNode].next = hashtable[currNode.next]
+
+    if currNode.randomPointer != None:
+        hashtable[currNode].randomPointer = hashtable[currNode.randomPointer]
+
+    currNode = currNode.next
+
+print("---------------")
+copiedLinkedList.listprint()
