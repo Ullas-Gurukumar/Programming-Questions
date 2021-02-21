@@ -1,9 +1,8 @@
 var divide = (dividend, divisor) => {
-  var negativeDividend = dividend < 0
-  var negativeDivisor = divisor < 0
   var maxVal = Math.pow(2, 31)
+  var sign = (dividend < 0) ^ (divisor < 0) ? -1 : 1
 
-  if (negativeDividend == negativeDivisor) {
+  if (sign === 1) {
     maxVal = maxVal - 1
   }
 
@@ -17,11 +16,7 @@ var divide = (dividend, divisor) => {
     retVal++
   }
 
-  if (negativeDividend == negativeDivisor) {
-    return retVal
-  } else {
-    return -1 * retVal
-  }
+  return sign * retVal
 }
 
 var ans = divide(10, 3)
