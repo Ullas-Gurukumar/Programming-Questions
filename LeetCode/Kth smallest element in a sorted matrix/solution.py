@@ -1,6 +1,7 @@
 from typing import List
 
-
+# Time: O(k)
+# Space: O(n)
 def kthSmallest(matrix: List[List[int]], k: int) -> int:
     if matrix is None:
         return None
@@ -24,7 +25,8 @@ def kthSmallest(matrix: List[List[int]], k: int) -> int:
     
     
     
-# O(nLog(n)), sort is the most expensive operation
+# Time: O(nLog(n)), sort is the most expensive operation
+# Space: O(nm)
 def smallest_by_sort(matrix: List[List[int]], k: int) -> int:
     combined = []
     for array in matrix:
