@@ -1,6 +1,6 @@
 from typing import List
 
-# Time: O(k)
+# Time: O(kn)
 # Space: O(n)
 def kthSmallest(matrix: List[List[int]], k: int) -> int:
     if matrix is None:
