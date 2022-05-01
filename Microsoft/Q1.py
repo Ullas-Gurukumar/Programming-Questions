@@ -1,6 +1,7 @@
-# you can write to stdout for debugging purposes, e.g.
-# print("this is a debug message")
-
+# Time Complexity: O(n) worst case
+# Space Complexity: O(1), just storing the number of occurrence of negative numbers
+# I exit out of the loop if I see a 0 since the product will always be 0 (0 * x = 0)
+# Checking for an empty array case, did not add None param check since the question mentioned I would be given an array, I'm assuming that it will not be None.
 def solution(array):
     if len(array) == 0:
         return 0

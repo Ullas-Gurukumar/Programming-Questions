@@ -1,6 +1,6 @@
-from turtle import pos
-
-
+# Since the performance didn't matter in this solution, I chose to use sort and store all posibilities for correctness.
+# Time Complexity: O(nlog(n)), this is due to the sort method
+# Space Complexity: O(n) for worst case, n being the length of number when converted to string.
 def solution(number):
     num_str = str(number)
     possibilities = []

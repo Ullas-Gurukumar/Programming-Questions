@@ -18,17 +18,24 @@ def solution(A):
 # Time Complexity: O(n), I only iterate over the array once
 # Space Complexity: O(1), just storing a few integers
 # there is further optimization that can be done. Since we are trying to find the largest distance, I start checking from the farthest  pair, once I find the first pair, I can skip over pairs with distance less than the pair I have found. 
-def solution(numbers):
+def solution2(numbers):
     n = len(numbers)
     result = 0
     pointer1 = 0
     pointer2 = n-1
-    for i in range(n):
-        if (numbers[pointer1] == numbers[n - i -1]):
-            result = max(result, abs(i - pointer1))
-        if (numbers[pointer2] == numbers[i]):
-            result = max(result, abs(pointer2 - i))
     
+    while (pointer1 < pointer2):
+        for i in range(n):
+            start = pointer1
+            end = n - i -1
+            if (start < end and numbers[start] == numbers[end]):
+                result = max(result, abs(i - pointer1))
+            
+            start = i
+            end = pointer2
+            if (start < end and numbers[start] == numbers[end]):
+                result = max(result, abs(pointer2 - i))
+        
         pointer1 += 1
         pointer2 -= 1
     return result
