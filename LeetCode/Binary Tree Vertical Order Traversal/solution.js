@@ -70,7 +70,60 @@ const getRightNode = (tree, index, currentOrder) => {
   return [tree[rightNodeIndex], rightNodeIndex, ++currentOrder]
 }
 
-console.log(verticalOrder([3, 9, 20, null, null, 15, 7]))
-console.log(verticalOrder([3, 9, 8, 4, 0, 1, 7]))
-console.log(verticalOrder([3, 9, 8, 4, 0, 1, 7, null, null, null, 2, 5]))
+const arrayTraversal = (tree) => {
+  let ordersCache = []
+  let lowestOrder = 0
+  let highestOrder = 0
+  let map = {}
+  tree.forEach((_, i) => {
+    if (tree[i] === null) {
+      ordersCache.push(null)
+      return
+    }
+
+    let currentOrder = 0
+
+    if (i === 0) {
+      ordersCache.push(0)
+    } else {
+      let parentIndex = ((i - 1) / 2) | 0
+      let isLeft = !!(i % 2)
+      currentOrder = isLeft ? ordersCache[parentIndex] - 1 : ordersCache[parentIndex] + 1
+      ordersCache.push(currentOrder)
+    }
+
+    if (map[currentOrder]) {
+      map[currentOrder].push(tree[i])
+    } else {
+      map[currentOrder] = [tree[i]]
+    }
+
+    if (currentOrder < lowestOrder) {
+      lowestOrder = currentOrder
+    }
+
+    if (currentOrder > highestOrder) {
+      highestOrder = currentOrder
+    }
+  })
+
+  let result = []
+  for (let i = lowestOrder; i <= highestOrder; i++) {
+    if (map[i]) {
+      result.push(map[i])
+    }
+  }
+  return result
+}
+
+// console.log(verticalOrder([3, 9, 20, null, null, 15, 7]))
+// console.log(verticalOrder([3, 9, 8, 4, 0, 1, 7]))
+// console.log(verticalOrder([3, 9, 8, 4, 0, 1, 7, null, null, null, 2, 5]))
+// console.log(verticalOrder([1, 2, 3, 4, 5, 6, 7]))
+
+// console.log(arrayTraversal([3, 9, 20, null, null, 15, 7]))
+// console.log(arrayTraversal([3, 9, 8, 4, 0, 1, 7]))
+console.log(arrayTraversal([3, 9, 8, 4, 0, 1, 7, null, null, null, 2, 5]))
+console.log(arrayTraversal([3, 9, 20, null, null, 15, 7]))
+// console.log(arrayTraversal([1, 2, 3, 4, 5, 6, 7]))
 // console.log(verticalOrder([3, 9, 20, null, null, 15, 7]))
