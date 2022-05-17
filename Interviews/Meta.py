@@ -36,24 +36,23 @@ def power(a, b):
 # [1, 3, 1, 4, 23], 7 : False
 
 def sequence_of_int(seq, target):
-    if target in seq:
-        return True
-
     pointer1 = 0 
-    pointer2 = len(seq)
+    pointer2 = len(seq) - 1
     
     while(pointer1 < pointer2):
-        for i in range(len(seq) - pointer1):
-            sum1 = sum(seq[pointer1 : len(seq) - i - 1])
-            sum2 = sum(seq[i : pointer2 - 1])
-
+        sum1 = seq[pointer1]
+        sum2 = seq[pointer2]
+        for i in range(pointer1 + 1, len(seq)):
             if sum1 is target or sum2 is target:
                 return True
+            
+            sum1 += seq[i]
+            sum2 += seq[pointer2 - i]
         
         pointer1 += 1
         pointer2 -= 1
 
     return False
 
-print(sequence_of_int([1, 3, 1, 4, 23], 23))
-print(power(2,3))
+print(sequence_of_int([1, 3, 1, 4, 23], 8))
+print(power(2,9))
