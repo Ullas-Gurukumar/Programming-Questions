@@ -17,11 +17,11 @@ Problem solving, coding, communication, competency
 
 - Describe a time where when you discovered something problamatic and how did you correct the situation before it became an issue
 - Provide an ex a time where you had to motivate other to deliver a challanging deliverable
-- Describe a long term project of which I took ownership and how did I make sure each milestore was achieved in a timely manner
+- Describe a long term project of which I took ownership and how did I make sure each milestore was achieved in a timely manner - SGS
 
 ### Customer Focus
 
-- Tell me about a time where you fell short of a customer needs
+- Tell me about a time where you fell short of a customer needs - Edmonton brokers
   - acknowledge the non ideal but talk about positives
 - describe a time when you were in the resolution of a customer complaint
 
