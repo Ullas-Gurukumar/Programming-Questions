@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ullas.Gurukumar\\Desktop\\New folder\\Skeleton\\Skeleton\\Skeleton.csproj": {}
+    "E:\\Repos\\Programming-Questions\\Others\\Discussion Thread\\Skeleton\\Skeleton\\Skeleton.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ullas.Gurukumar\\Desktop\\New folder\\Skeleton\\Skeleton\\Skeleton.csproj": {
+    "E:\\Repos\\Programming-Questions\\Others\\Discussion Thread\\Skeleton\\Skeleton\\Skeleton.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ullas.Gurukumar\\Desktop\\New folder\\Skeleton\\Skeleton\\Skeleton.csproj",
+        "projectUniqueName": "E:\\Repos\\Programming-Questions\\Others\\Discussion Thread\\Skeleton\\Skeleton\\Skeleton.csproj",
         "projectName": "Skeleton",
-        "projectPath": "C:\\Users\\Ullas.Gurukumar\\Desktop\\New folder\\Skeleton\\Skeleton\\Skeleton.csproj",
-        "packagesPath": "C:\\Users\\Ullas.Gurukumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ullas.Gurukumar\\Desktop\\New folder\\Skeleton\\Skeleton\\obj\\",
+        "projectPath": "E:\\Repos\\Programming-Questions\\Others\\Discussion Thread\\Skeleton\\Skeleton\\Skeleton.csproj",
+        "packagesPath": "C:\\Users\\Ullas\\.nuget\\packages\\",
+        "outputPath": "E:\\Repos\\Programming-Questions\\Others\\Discussion Thread\\Skeleton\\Skeleton\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ullas.Gurukumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ullas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,11 +22,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/iqmetrix/_packaging/iqmetrix/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Azure.Cosmos.Table": {
               "target": "Package",
@@ -65,6 +63,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.22, 3.1.22]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -73,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
